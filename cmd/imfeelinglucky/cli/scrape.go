@@ -67,6 +67,6 @@ func init() {
 	f := scrapeCmd.Flags()
 	f.IntP("year", "y", 2004, "The year the cli will scrape from until current year")
 	f.StringP("file-path", "p", "", "The file path to store the data")
-	f.BoolP("silent", "s", false, "Silent mode, will not print the stucture with the scraped draws")
+	f.BoolP("silent", "s", false, "Silent mode, will not print the structure with the scraped draws")
 	rootCmd.AddCommand(scrapeCmd)
 }
