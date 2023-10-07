@@ -7,7 +7,7 @@ The key generation is based purely in computer randomization. It's possible matc
 
 ## Third party data
 
-`lucky` CLI can work in a standalone manner by passing `disable-check` check flag to `draw` command.   
+`lucky` CLI can work in a standalone manner by passing `disable-check` flag to `draw` command.   
 All the other commands are leveraged by using data from [euro-millions](https://www.euro-millions.com/) website.   
 Since there's no API available the data is scraped from source page HTML.   
 The only data scraped are the number and the stars from each past draw.   
