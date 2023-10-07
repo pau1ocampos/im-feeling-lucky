@@ -9,7 +9,7 @@ The key generation is based purely in computer randomization. It's possible matc
 
 `lucky` CLI can work in a standalone manner by passing `disable-check` check flag to `draw` command.   
 All the other commands are leveraged by using data from [euro-millions](https://www.euro-millions.com/) website.   
-Since there's no API available the data is scaped from source page HTML.   
+Since there's no API available the data is scraped from source page HTML.   
 The only data scraped are the number and the stars from each past draw.   
 The data scraped is only used to check if the generated key is _repeated_, meaning that if the generated key was already drawn in the past.   
 It's possible to store the parsed data into a `json` file, intention is this that that data to be used to feed the `draw` command and nothing else.
@@ -49,7 +49,7 @@ Spec of json file:
 ]
 ```
 
-### Scape data from the web
+### Scrape data from the web
 
 ```shell
 lucky scrape --year 2004 --file-path /path/to/store/data --silent
