@@ -5,11 +5,15 @@ This is just a small project that I worked on to practice my Go skills.
 
 The key generation is based purely in computer randomization. It's possible match the generated key with the past draw results (very unlikely event) - in case of a repeated key a new one is generated.
 
+![CI](https://github.com/pau1ocampos/im-feeling-lucky/actions/workflows/ci.yaml/badge.svg)
+[![Go Report Card](https://goreportcard.com/badge/github.com/pau1ocampos/im-feeling-lucky)](https://goreportcard.com/report/github.com/pau1ocampos/im-feeling-lucky)
+
+
 ## Third party data
 
-`lucky` CLI can work in a standalone manner by passing `disable-check` check flag to `draw` command.   
+`lucky` CLI can work in a standalone manner by passing `disable-check` flag to `draw` command.   
 All the other commands are leveraged by using data from [euro-millions](https://www.euro-millions.com/) website.   
-Since there's no API available the data is scaped from source page HTML.   
+Since there's no API available the data is scraped from source page HTML.   
 The only data scraped are the number and the stars from each past draw.   
 The data scraped is only used to check if the generated key is _repeated_, meaning that if the generated key was already drawn in the past.   
 It's possible to store the parsed data into a `json` file, intention is this that that data to be used to feed the `draw` command and nothing else.
@@ -49,7 +53,7 @@ Spec of json file:
 ]
 ```
 
-### Scape data from the web
+### Scrape data from the web
 
 ```shell
 lucky scrape --year 2004 --file-path /path/to/store/data --silent

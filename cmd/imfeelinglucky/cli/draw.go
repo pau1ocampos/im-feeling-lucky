@@ -15,18 +15,18 @@ var drawCmd = &cobra.Command{
 	Short:   "Draws a valid Euromillions key",
 	Long: `Draws a valid Euromillions key. This draw is purely based on computer randoomization, it has no special algorithms supporting it.
 Only smarteness is that it checks if the generated key was a past winning key. If it is, it gerenates a new on.
-Since the odds of the generated key is one of the past winning keys is so low, it's possible to disbale this behaviour. Check the flags documentation.`,
+Since the odds of the generated key is one of the past winning keys is so low, it's possible to disable this behaviour. Check the flags documentation.`,
 	Args: cobra.NoArgs,
 	Run: func(cmd *cobra.Command, args []string) {
 		fpath, err := cmd.Flags().GetString("file-path")
 
 		if err != nil {
-			log.Fatalf("An error ocurred parsing the file-path flag: %v\n", err)
+			log.Fatalf("An error occurred parsing the file-path flag: %v\n", err)
 		}
 
 		dc, err := cmd.Flags().GetBool("disable-check")
 		if err != nil {
-			log.Fatalf("An error ocurred parsing the silent flag: %v\n", err)
+			log.Fatalf("An error occurred parsing the silent flag: %v\n", err)
 		}
 
 		opts := lucky.Options{

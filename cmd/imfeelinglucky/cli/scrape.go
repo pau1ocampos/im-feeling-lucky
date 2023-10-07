@@ -21,18 +21,18 @@ You can choose to save the file on your local machine, otherwise results will be
 		year, err := cmd.Flags().GetInt("year")
 
 		if err != nil {
-			log.Fatalf("An error ocurred getting the year flag: %v\n", err)
+			log.Fatalf("An error occurred getting the year flag: %v\n", err)
 		}
 
 		fpath, err := cmd.Flags().GetString("file-path")
 
 		if err != nil {
-			log.Fatalf("An error ocurred parsing the file-path flag: %v\n", err)
+			log.Fatalf("An error occurred parsing the file-path flag: %v\n", err)
 		}
 
 		silent, err := cmd.Flags().GetBool("silent")
 		if err != nil {
-			log.Fatalf("An error ocurred parsing the silent flag: %v\n", err)
+			log.Fatalf("An error occurred parsing the silent flag: %v\n", err)
 		}
 
 		shouldStore := false
@@ -54,7 +54,7 @@ You can choose to save the file on your local machine, otherwise results will be
 		defer cancel()
 		draws, err := opts.ScrapeFrom(ctx)
 		if err != nil {
-			log.Fatalf("An error ocurred scraping %s: %v\n", websiteUrl, err)
+			log.Fatalf("An error occurred scraping %s: %v\n", websiteUrl, err)
 		}
 
 		if !silent {
