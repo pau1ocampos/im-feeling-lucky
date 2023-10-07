@@ -5,6 +5,10 @@ This is just a small project that I worked on to practice my Go skills.
 
 The key generation is based purely in computer randomization. It's possible match the generated key with the past draw results (very unlikely event) - in case of a repeated key a new one is generated.
 
+![CI](https://github.com/pau1ocampos/im-feeling-lucky/actions/workflows/ci.yaml/badge.svg)
+[![Go Report Card](https://goreportcard.com/badge/github.com/pau1ocampos/im-feeling-lucky)](https://goreportcard.com/report/github.com/pau1ocampos/im-feeling-lucky)
+
+
 ## Third party data
 
 `lucky` CLI can work in a standalone manner by passing `disable-check` flag to `draw` command.   
